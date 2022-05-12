@@ -19,6 +19,7 @@ public:
    std::variant<VarTerm, FuncTerm> m_value; 
    Term(VarTerm v) : m_value(v) {} 
    Term(FuncTerm f) : m_value(f) {}
+   void print() const;
 };
 
 

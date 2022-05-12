@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.5.1)
 project (gilmores-procedure)
 
 set(FORMULAS_SRC
+    src/term.cpp
 )
 set(MAIN_SRC
     main.cpp
