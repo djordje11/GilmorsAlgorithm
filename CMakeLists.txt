@@ -3,6 +3,10 @@ project (gilmores-procedure)
 
 set(FORMULAS_SRC
     src/term.cpp
+    src/torf.cpp
+    src/notformula.cpp
+    src/ar_std.cpp
+    src/atomformula.cpp
 )
 set(MAIN_SRC
     main.cpp
