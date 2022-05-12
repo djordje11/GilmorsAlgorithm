@@ -1,6 +1,6 @@
 #include "term.h"
 #include <iostream>
-
+#include "ar_std.h"
 
 void Term::print() const
 {
@@ -11,14 +11,6 @@ void Term::print() const
     else if(m_value.index() == 1)
     {
         const FuncTerm& ft = std::get<FuncTerm>(m_value);
-        std::cout << ft.first << "(";
-        for(auto it = ft.second.begin(); it != ft.second.end() - 1; ++it)
-        {
-                it->print();
-                std::cout << ", ";
-        }
-        if(ft.second.size() > 0)
-            (ft.second.end() - 1)->print();
-        std::cout << ")";
+        printInFunctionNotation(ft.first, ft.second);
     }
 }
