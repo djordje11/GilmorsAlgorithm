@@ -5,11 +5,14 @@
 #include <utility>
 #include <vector>
 #include <variant>
+#include <memory>
 
 class Term;
 using VarTerm = std::string;
 using FuncTerm = std::pair<std::string, std::vector<Term>>;
 
+using TermPtr = std::shared_ptr<Term>;
+using TermList = std::vector<TermPtr>;
 class Term
 {
 public:
