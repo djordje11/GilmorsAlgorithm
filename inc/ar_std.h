@@ -2,18 +2,18 @@
 #define A4F19B9F_5B02_4982_8719_F58C631F2378
 
 #include <string>
-
+#include <iostream>
 template <typename Container>
 void printInFunctionNotation(std::string func_name, Container args)
 {
         std::cout << func_name << "(";
         for(auto it = args.begin(); it != args.end() - 1; ++it)
         {
-                it->print();
+                (*it)->print();
                 std::cout << ", ";
         }
         if(args.size() > 0)
-            (args.end() - 1)->print();
+            (*(args.end() - 1))->print();
         std::cout << ")";
 }
 
