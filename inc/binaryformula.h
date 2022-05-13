@@ -29,10 +29,10 @@ public:
 
 template<BinaryType type>
 std::map<BinaryType, std::string> BinaryFormula<type>::operators = {
-    std::make_pair(BinaryType::AND, "and"),
-    std::make_pair(BinaryType::OR, "or"),
-    std::make_pair(BinaryType::IFF, "iff"),
-    std::make_pair(BinaryType::IMP, "imp")
+    std::make_pair(BinaryType::AND, "/\\"),
+    std::make_pair(BinaryType::OR, "v"),
+    std::make_pair(BinaryType::IFF, "<=>"),
+    std::make_pair(BinaryType::IMP, "=>")
 };
 
 
