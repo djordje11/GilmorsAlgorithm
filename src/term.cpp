@@ -14,3 +14,18 @@ void Term::print() const
         printInFunctionNotation(ft.first, ft.second);
     }
 }
+
+bool Term::isVar() const
+{
+    return m_value.index() == 0;
+}
+bool Term::isFun() const
+{
+    return m_value.index() == 1;
+}
+
+
+unsigned Term::narity() const
+{
+    return isVar() ? 0 : std::get<FuncTerm>(m_value).second.size();
+}

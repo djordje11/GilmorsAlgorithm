@@ -6,6 +6,7 @@
 #include <vector>
 #include <variant>
 #include <memory>
+#include "interpretation.h"
 
 class Term;
 using TermPtr = std::shared_ptr<Term>;
@@ -20,6 +21,9 @@ public:
    Term(VarTerm v) : m_value(v) {} 
    Term(FuncTerm f) : m_value(f) {}
    void print() const;
+   bool isVar() const;
+   bool isFun() const;
+   unsigned narity() const;
 };
 
 
